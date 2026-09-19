@@ -22,6 +22,8 @@ description: 轻量设计前置流程。用户要构建新功能、新项目、�
 
 ## 第二步：批量澄清（bounded 与 architectural）
 
+**领域问题库（可选）**：检测项目技术栈（`pom.xml`/`build.gradle` + k8s 清单或 Spring 依赖 → `references/k8s-spring.md`；vectorbt/pypfopt/akshare 等 → `references/quant.md`），命中则把对应问题库作为候选前沿——按任务选用，不必全问。
+
 把设计决策建模为**决策树**，每轮只问"前沿"——前置决策已就绪、现在就能问的问题。规则：
 
 - **一轮问完整个前沿**。每题编号，并**附上你的推荐答案**（用户的任务是判断推荐对不对，不是从零想答案）。

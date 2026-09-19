@@ -7,6 +7,10 @@ description: 系统化排障流程。遇到任何 bug、测试失败、构建失
 
 **铁律：没有根因，不动手修。症状式修复 = 失败。** 各阶段必须按序完成，跳阶段要有明确理由。
 
+## 技术栈检测（Phase 1 前，一次性）
+
+扫描栈标记（`pom.xml`/`build.gradle` → `references/java-spring-boot.md`；quant 依赖 → `references/python-quant.md`），命中则加载——里面有栈内的回路构造优先序、假设边界插桩点和诊断工具（OOM 决策树、pg_stat_statements、pandas 索引对齐坑等）。未命中 → 跳过。
+
 ## Phase 0：脱敏红线
 
 展示命令、输出、抓取的报文之前，先把密钥写成 `<REDACTED>`；回路脚本用环境变量读凭据，别把凭据写进脚本和展示内容。脱敏后不足以定位时，明说并向用户要。

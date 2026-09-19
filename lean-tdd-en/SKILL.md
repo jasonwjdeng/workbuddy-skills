@@ -7,6 +7,10 @@ description: Test-driven development workflow. Use when implementing any feature
 
 **Iron law: no production code without a failing test first.** Already wrote code? Delete it and start over — do not keep it "as reference", do not "adapt" it, do not look at it. Delete means delete.
 
+## Stack detection (once, before starting)
+
+Scan the project root for stack markers (`pom.xml`/`build.gradle` → Java; `pyproject.toml`/`requirements.txt` → Python). On a hit, read the matching stack reference under `references/` (e.g. `java-spring-boot.md`, `python-quant.md`) and apply its conventions. No marker matched → skip this step and use the generic rules only. **The project's AGENTS.md conventions take precedence over stack references.**
+
 ## The cycle
 
 ```

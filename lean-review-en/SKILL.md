@@ -7,6 +7,10 @@ description: Verification before completion and pre-commit review. Use before cl
 
 **Iron law: no completion claims without fresh verification evidence.** Confidence ≠ evidence.
 
+## Stack detection (once, before reviewing)
+
+Scan the project root for stack markers (`pom.xml`/`build.gradle` → Java; `pyproject.toml`/`requirements.txt` → Python). On a hit, read the matching checklist under `references/` (e.g. `java-spring-boot.md`, `python-quant.md`) and check items by their ⚠️/◆/· pre-graded severity. No marker → skip. The project's AGENTS.md conventions take precedence.
+
 ## The gate (before any completion-type claim)
 
 ```

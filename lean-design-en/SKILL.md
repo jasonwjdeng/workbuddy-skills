@@ -22,6 +22,8 @@ When in doubt, take the heavier path. **The ratchet is one-way**: hidden complex
 
 ## Step 2: Batch clarification (bounded & architectural)
 
+**Domain question banks (optional)**: detect the project stack (`pom.xml`/`build.gradle` + k8s manifests or Spring deps → `references/k8s-spring.md`; vectorbt/pypfopt/akshare etc. → `references/quant.md`). On a hit, use the matching question bank as candidate frontier questions — pick what fits, don't ask everything.
+
 Model the design as a **decision tree**: every decision branches into the decisions that hang off it. Each round, ask only the **frontier** — questions whose prerequisites are already settled. Rules:
 
 - **Ask the whole frontier in one round.** Number each question and **attach your recommended answer** — the user's job is to judge your recommendation, not to invent answers from scratch.

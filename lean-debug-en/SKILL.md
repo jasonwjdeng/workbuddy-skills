@@ -7,6 +7,10 @@ description: Systematic debugging workflow. Use for any bug, test failure, build
 
 **Iron law: no fixes without root cause. Symptom fixes are failure.** Phases run in order; skipping one needs an explicit justification.
 
+## Stack detection (once, before Phase 1)
+
+Scan for stack markers (`pom.xml`/`build.gradle` → `references/java-spring-boot.md`; quant dependencies → `references/python-quant.md`). On a hit, load it — it carries stack-specific loop construction order, hypothesis-boundary instrumentation points, and diagnostic tooling (OOM decision tree, pg_stat_statements, pandas index-alignment traps, etc.). No marker → skip.
+
 ## Phase 0: Redaction
 
 Before showing any command, output, or captured artifact, replace secrets with `<REDACTED>`. Loop scripts read credentials from env vars — never hardcode them into scripts or what you display. If redacted output is not enough to diagnose, say so and ask the user.

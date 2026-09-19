@@ -7,6 +7,10 @@ description: 测试驱动开发流程。实现任何功能、修复 bug、重构
 
 **铁律：没有先失败的测试，就不写生产代码。** 已经写了？删掉，重来——不留"参考"、不"改写"、不看它。删掉就是删掉。
 
+## 技术栈检测（开工前，一次性）
+
+扫描项目根目录的栈标记（`pom.xml`/`build.gradle` → Java；`pyproject.toml`/`requirements.txt` → Python），命中则读取 `references/` 下对应的栈参考文件（如 `java-spring-boot.md`、`python-quant.md`）并应用其中的约定。未命中任何栈 → 跳过本步，只用通用规则。**项目的 AGENTS.md 约定优先级高于栈参考。**
+
 ## 循环
 
 ```

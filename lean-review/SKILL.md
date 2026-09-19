@@ -7,6 +7,10 @@ description: 完成前验证与提交前评审。在声称"完成/修好/通过"
 
 **铁律：没有刚跑的验证命令输出，不许说"好了/通过了/修好了"。** 信心 ≠ 证据。
 
+## 技术栈检测（评审前，一次性）
+
+扫描项目根目录的栈标记（`pom.xml`/`build.gradle` → Java；`pyproject.toml`/`requirements.txt` → Python），命中则读取 `references/` 下对应的栈检查清单（如 `java-spring-boot.md`、`python-quant.md`），按其中的 ⚠️/◆/· 预分级逐项核对。未命中 → 跳过。项目 AGENTS.md 约定优先。
+
 ## 门函数（任何完成类声称前）
 
 ```
