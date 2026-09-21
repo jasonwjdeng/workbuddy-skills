@@ -1,9 +1,14 @@
 ---
 name: lean-review-en
-description: Verification before completion and pre-commit review. Use before claiming work is done/fixed/passing, before committing or creating a PR, or when accepting delegated work — run fresh verification first, then review the diff by severity. Triggers: review, verify, double-check, ready to commit, almost done, looks finished.
+description: Discipline skill (model-invoked — applies automatically before completion claims/commits). Verification before completion and pre-commit review: run fresh verification first, then review the diff by severity. Triggers: review, verify, double-check, ready to commit, almost done, looks finished.
+invocation: model
 ---
 
 # Lean Review — Evidence Before Claims
+
+## Invocation tier
+
+This is a **discipline skill (model-invoked)**: it applies automatically before completion claims and commits — no explicit user request needed. It never launches orchestration skills (lean-design-en / lean-implement-en) on its own — requirement-level gaps found in review get reported as-is, and the user decides whether to re-enter the design flow.
 
 **Iron law: no completion claims without fresh verification evidence.** Confidence ≠ evidence.
 

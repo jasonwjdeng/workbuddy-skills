@@ -1,9 +1,14 @@
 ---
 name: lean-implement
-description: 按计划执行的开发流程。已有设计/计划/规格要落地时使用：先批判性读计划，逐任务执行并逐个验证，阻塞就停下问而不是猜。触发词：按计划实现、开工、开始开发、implement、execute the plan。
+description: 编排类 skill（user-invoked，仅用户拿着计划明确要求执行时启动，不自动触发）。按计划执行的开发流程：先批判性读计划，逐任务执行并逐个验证，阻塞就停下问而不是猜。触发词：按计划实现、开工、开始开发、implement、execute the plan。
+invocation: user
 ---
 
 # Lean Implement — 照计划做，阻塞就问
+
+## 调用层级
+
+本 skill 是**编排类（user-invoked）**：只在用户拿着计划/设计明确要求执行时启动。可调用纪律类 skill（收尾必须进 lean-review；写码过程走 lean-tdd）；纪律类不会反向调用本 skill。
 
 **开场声明**："我正在按 lean-implement 执行这份计划。"
 

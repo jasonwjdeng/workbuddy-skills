@@ -1,9 +1,14 @@
 ---
 name: lean-design
-description: 轻量设计前置流程。用户要构建新功能、新项目、修改现有代码或提出任何"做一个 X"的请求时使用，在写代码之前先完成分类、批量澄清和设计确认。触发词：设计、方案、架构、做个/构建/实现 X、brainstorm。
+description: 编排类 skill（user-invoked，仅用户明确要求时启动，不自动触发）。轻量设计前置流程：用户要做新功能/新项目/修改现有代码并主动要求设计或对齐时，先完成分类、批量澄清和一次确认再写代码。触发词：设计、方案、架构、做个/构建/实现 X、brainstorm、规划。
+invocation: user
 ---
 
 # Lean Design — 轻量设计前置
+
+## 调用层级
+
+本 skill 是**编排类（user-invoked）**：只在用户明确要求时启动。任务看起来适合但用户没点名时，先问一句"要走 lean-design 吗？"，不自动开始追问。编排类可调用纪律类 skill（lean-tdd / lean-debug / lean-review）；纪律类不会反向调用本 skill。
 
 写代码之前，先完成一次快速对齐。全程遵循两条铁律：
 

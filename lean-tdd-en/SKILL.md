@@ -1,9 +1,14 @@
 ---
 name: lean-tdd-en
-description: Test-driven development workflow. Use when implementing any feature, fixing a bug, refactoring, or changing behavior — write a failing test before production code. Triggers: tdd, write tests, test first, implement, refactor.
+description: Discipline skill (model-invoked — applies automatically when the task fits). Test-driven development workflow: use when implementing any feature, fixing a bug, refactoring, or changing behavior — write a failing test before production code. Triggers: tdd, write tests, test first, implement, refactor.
+invocation: model
 ---
 
 # Lean TDD — Red First, Then Green
+
+## Invocation tier
+
+This is a **discipline skill (model-invoked)**: it applies automatically when the task fits — no explicit user request needed. It never launches orchestration skills (lean-design-en / lean-implement-en) on its own — when it finds a problem that needs a design decision (unclear requirements, forking approaches), it reports to the user and lets them decide whether to enter the design flow.
 
 **Iron law: no production code without a failing test first.** Already wrote code? Delete it and start over — do not keep it "as reference", do not "adapt" it, do not look at it. Delete means delete.
 

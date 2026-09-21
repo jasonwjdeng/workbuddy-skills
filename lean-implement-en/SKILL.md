@@ -1,9 +1,14 @@
 ---
 name: lean-implement-en
-description: Plan execution workflow. Use when a design, plan, or spec is ready to build — review the plan critically, execute task by task with per-task verification, and stop to ask instead of guessing when blocked. Triggers: implement the plan, start building, execute the plan, let's develop this.
+description: Orchestration skill (user-invoked — start only when the user brings a plan and explicitly asks to execute it, never auto-trigger). Plan execution workflow: review the plan critically, execute task by task with per-task verification, stop to ask instead of guessing when blocked. Triggers: implement the plan, start building, execute the plan, let's develop this.
+invocation: user
 ---
 
 # Lean Implement — Follow the Plan, Ask When Blocked
+
+## Invocation tier
+
+This is an **orchestration skill (user-invoked)**: start only when the user brings a plan/design and explicitly asks to execute it. It may invoke discipline skills (wrap-up must go through lean-review-en; coding goes through lean-tdd-en); discipline skills never invoke this one back.
 
 **Opening line**: "I'm executing this plan with lean-implement."
 

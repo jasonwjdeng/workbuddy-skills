@@ -1,9 +1,14 @@
 ---
 name: lean-review
-description: 完成前验证与提交前评审。在声称"完成/修好/通过"、提交 commit、创建 PR 或交付任务前使用：先跑验证拿证据，再做结论；按严重度评审 diff。触发词：review、验证、检查、差不多了、提交前、做完了。
+description: 纪律类 skill（model-invoked，声称完成/提交前自动生效）。完成前验证与提交前评审：先跑验证拿证据再做结论，按严重度评审 diff。触发词：review、验证、检查、差不多了、提交前、做完了。
+invocation: model
 ---
 
 # Lean Review — 先证据，后结论
+
+## 调用层级
+
+本 skill 是**纪律类（model-invoked）**：声称完成/提交前自动生效，无需用户点名。不主动启动编排类 skill（lean-design / lean-implement）——评审发现需求级缺口时，如实报告，由用户决定是否回到设计流程。
 
 **铁律：没有刚跑的验证命令输出，不许说"好了/通过了/修好了"。** 信心 ≠ 证据。
 

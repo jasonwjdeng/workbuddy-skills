@@ -1,9 +1,14 @@
 ---
 name: lean-design-en
-description: Lean design-first workflow. Use when the user asks to build, create, implement, or modify anything (new feature, new project, code change), to align before writing code. Triggers: design, spec, architecture, brainstorm, "let's build X", "add a feature".
+description: Orchestration skill (user-invoked — start only on explicit user request, never auto-trigger). Lean design-first workflow: when the user asks to build/create/implement something and explicitly wants design alignment first — classify, batch-clarify, get one approval, then code. Triggers: design, spec, architecture, brainstorm, "let's build X", plan this.
+invocation: user
 ---
 
 # Lean Design — Design-First, Lightly
+
+## Invocation tier
+
+This is an **orchestration skill (user-invoked)**: start only when the user explicitly asks. If the task looks like a fit but the user hasn't named it, ask "want to run lean-design?" instead of auto-starting an interrogation. Orchestration skills may invoke discipline skills (lean-tdd-en / lean-debug-en / lean-review-en); discipline skills never invoke this one back.
 
 Align before writing code. Two iron rules throughout:
 

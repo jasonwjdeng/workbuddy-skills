@@ -1,9 +1,14 @@
 ---
 name: lean-debug-en
-description: Systematic debugging workflow. Use for any bug, test failure, build failure, unexpected behavior, or performance regression — build a red-capable feedback loop before proposing fixes. Triggers: debug, diagnose, fix this bug, why is this broken, failing test, performance regression.
+description: Discipline skill (model-invoked — applies automatically when a bug shows up). Systematic debugging workflow: use for any bug, test failure, build failure, unexpected behavior, or performance regression — build a red-capable feedback loop before proposing fixes. Triggers: debug, diagnose, fix this bug, why is this broken, failing test, performance regression.
+invocation: model
 ---
 
 # Lean Debug — Loop First, Fix Second
+
+## Invocation tier
+
+This is a **discipline skill (model-invoked)**: it applies automatically when a bug/failure appears — no explicit user request needed. It never launches orchestration skills (lean-design-en / lean-implement-en) on its own — architecture-level findings (e.g. "no correct test seam exists") get recorded and reported to the user, who decides whether to enter the design flow.
 
 **Iron law: no fixes without root cause. Symptom fixes are failure.** Phases run in order; skipping one needs an explicit justification.
 

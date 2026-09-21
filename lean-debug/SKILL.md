@@ -1,9 +1,14 @@
 ---
 name: lean-debug
-description: 系统化排障流程。遇到任何 bug、测试失败、构建失败、异常行为或性能回归时使用，先建反馈回路再谈修复。触发词：debug、排查、报错、修 bug、为什么挂了、failing test、性能退化。
+description: 纪律类 skill（model-invoked，遇到 bug 时自动生效）。系统化排障流程：遇到任何 bug、测试失败、构建失败、异常行为或性能回归时使用，先建反馈回路再谈修复。触发词：debug、排查、报错、修 bug、为什么挂了、failing test、性能退化。
+invocation: model
 ---
 
 # Lean Debug — 先回路，后修复
+
+## 调用层级
+
+本 skill 是**纪律类（model-invoked）**：遇到 bug/失败时自动生效，无需用户点名。不主动启动编排类 skill（lean-design / lean-implement）——发现"没有正确测试接缝"等架构级问题时，记录并报告给用户，由用户决定是否进入设计流程。
 
 **铁律：没有根因，不动手修。症状式修复 = 失败。** 各阶段必须按序完成，跳阶段要有明确理由。
 
