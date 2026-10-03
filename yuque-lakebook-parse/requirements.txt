@@ -1,0 +1,4 @@
+# 可选依赖：安装后 HTML 解析与目录树还原质量最佳。
+# 未安装时 lakebook_parser.py 会自动降级到内置的纯标准库实现，仍可正常运行。
+markdownify>=0.11
+PyYAML>=6.0
