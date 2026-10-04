@@ -133,3 +133,4 @@ which say afconvert afinfo
 ## 相关技能
 
 - 需要先批改/改写英文作文再朗读 → `english-essay-rewrite`
+- 需要把多段朗读**按精确时间点拼成一条音轨**做视频配音（不是单篇朗读）→ `ak-output-ladder` 的四级视频那节（`say` 量时长 → `afconvert` → Python `wave` 定长拼轨，总长必须等于视频总长）
