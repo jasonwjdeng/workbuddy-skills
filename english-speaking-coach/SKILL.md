@@ -66,7 +66,7 @@ OMP_NUM_THREADS=4 $V /Users/lvchajason/.workbuddy/skills/english-speaking-coach/
 - **`--domain-prompt` 必加**：不加会把 `employs Spring Boot` 听成 "implies Springboard"、`Azure DevOps` 听成 "Zoo DevOps"、`backend` 听成 "background"，制造一堆假的"发音错误"。
 - **`--asr-cache` 必加**：命中的话 40 秒的分析变 4 秒，调参期差别巨大。缓存键含文件 size+mtime，重录不会读到旧结果。
 - `--model small.en`（默认）比 `base.en` 准；`base.en` 只在赶时间时用。
-- 音频解码走系统自带 `afconvert`，波形以 numpy 数组喂给 whisper，**不需要 ffmpeg**。
+- 音频解码走系统自带 `afconvert`，波形以 numpy 数组喂给 whisper，**不需要 ffmpeg**。**数组必须是 16kHz**：whisper 对 numpy 输入默认按 16kHz 解释，44.1kHz 语音会被拉慢 2.76× 而识别失败（空转写、幻听循环短语、回显 initial_prompt）。解码后统一 `afconvert -d LEI16@16000 -f WAVE` 重采样（2026-10-09 事故：两段 44.1kHz 录音三番五次识别失败，重采样后立刻正常）。
 
 ### 步骤 4：读 JSON 并写报告
 
