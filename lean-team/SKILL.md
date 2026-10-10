@@ -14,7 +14,7 @@ invocation: user
 
 1. **产物文件交接，上下文只留协调**——文件写盘免费，读进上下文才花钱
 2. **Rulings, not stalls**——只有四件事停下问人：不可逆操作、安全敏感、worktree 外副作用（merge/push）、计划坏到每条路都是猜。其余 controller 裁决并记 ledger
-3. **派遣时显式指定模型**——转录级 → lite，集成判断 → default，架构/终审 → reasoning。不指定 = 默认继承最贵模型
+3. **派遣时显式指定模型**——转录级 → lite，集成判断 → default，架构/终审 → reasoning。不指定 = 默认继承最贵模型。**lite 仅用于满足三条件的任务：① 计划段含完整代码 ② 触碰文件 ≤2（不含 lock/生成文件）③ 不新增任何公开接口。判定由 controller 完成并写入 brief，绝不由廉价模型自评**。派 lite 时改用 `references/lite-implementer-prompt.md`。评审者不降级，仍用 default。
 
 ## 第 0 步：执行分级（先宣布，可否决）
 

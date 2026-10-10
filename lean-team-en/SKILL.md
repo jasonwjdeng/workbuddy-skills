@@ -14,7 +14,7 @@ Orchestration skill (user-invoked): start only when the user brings a plan and e
 
 1. **Artifacts travel as files; context holds only coordination** — writing files to disk is free; reading them into context is what costs
 2. **Rulings, not stalls** — only four things stop for a human: irreversible operations, security-sensitive actions, side effects outside the worktree (merge/push), and a plan so broken every path forward is a guess. Everything else the controller rules on and ledgers
-3. **Always specify the model when dispatching** — transcription → lite, integration judgment → default, architecture/final review → reasoning. Omitting it silently inherits the most expensive model
+3. **Always specify the model when dispatching** — transcription → lite, integration judgment → default, architecture/final review → reasoning. Omitting it silently inherits the most expensive model. **Use lite only when all three hold: (1) the plan section contains complete code, (2) ≤2 files touched excluding lock/generated files, (3) no new public interface. The controller decides and writes it into the brief — a cheap model never self-assesses this.** When dispatching lite, use references/lite-implementer-prompt.md. Reviewers are not downgraded; they stay on default.
 
 ## Step 0: Execution tier (announce first; user can override)
 
