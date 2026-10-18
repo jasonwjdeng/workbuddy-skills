@@ -1,0 +1,101 @@
+# ============================================================
+# 凭据与本地私有状态 —— 绝不入库
+# ============================================================
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+*.jks
+*.keystore
+secrets.json
+credentials.json
+.mx-skills/
+em_api_key
+pending_auth.json
+
+# 各平台私有跨会话凭据落点（防御性规则）
+.mcp.json
+.auth-token
+.token
+
+# ============================================================
+# 用户数据 / 运行产物
+# ============================================================
+miaoxiang/
+output/
+recordings/
+trading/
+draft/
+*.log
+*.sqlite
+*.sqlite3
+*.db
+*.db-journal
+*.csv
+*.xlsx
+*.xls
+
+# ============================================================
+# Python
+# ============================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ============================================================
+# Node
+# ============================================================
+node_modules/
+dist/
+build/
+.cache/
+*.tsbuildinfo
+
+# ============================================================
+# macOS / 编辑器
+# ============================================================
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ============================================================
+# 工具本地迁移标记（仅当前机器有意义）
+# ============================================================
+.*_migration.json
+_bm_skillid_migration.json
+
+# ============================================================
+# 未纳入版本管理的 skills（本地安装/私有技能，暂不入库）
+# ============================================================
+/aihot/
+/ashare-short-term-trading/
+/deep-research-engine/
+/fund-diagnosis/
+/hk-annual-report-pdf-extract/
+/mx-finance-data/
+/mx-finance-search/
+/mx-macro-data/
+/mx-stocks-screener/
+/selfcontained-html-report/
+/show-me/
+/spring-boot-productionization/
+/stock-diagnosis/
+/stock-market-hotspot-discovery/
+/stock-thesis-update/
